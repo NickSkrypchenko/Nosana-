@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhatTheFont! « MyFonts</title>
+    <script>
+        var domain = window.location.host;
+        var mainDomain = domain.split('.')[1];
+        var cdnURL = (mainDomain.length === 7) ? 'https://csp.myfonts.com': 'https://csp.myfonts-beta.com';
+        var siteName = 'WtfFrontend';
+        var scr = document.createElement('SCRIPT');
+        scr.src = cdnURL+'/csp_config.js';
+        document.head.appendChild(scr);
+    </script>
+    <!-- Script for Tophat Banner web component -->
+    <script>
+      var bannerURL = 'https://th-banner.myfonts.com';
+      var emsScr = document.createElement('SCRIPT');
+      emsScr.type = "module";
+      emsScr.src = bannerURL+'/myfonts-tophat-banner.esm.js';
+      document.head.appendChild(emsScr);
+      // nomodule script
+      var noEmsScr = document.createElement('SCRIPT');
+      noEmsScr.noModule = true;
+      noEmsScr.src = bannerURL+'/myfonts-tophat-banner.js';
+      document.head.appendChild(noEmsScr);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf8"/>
+    <meta name="description" content="Seen a font in use and want to know what it is? Upload an image to WhatTheFont to find the closest matches in our database.">
+    <link rel="canonical" href="https://www.myfonts.com/WhatTheFont/">
+
+    <!-- OneTrust Cookies Consent Notice start -->
+    <script src="https://cdn.cookielaw.org/consent/b213127b-85c2-44e4-bf76-b4ae131406d0.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <!-- OneTrust Cookies Consent Notice end -->
+
+    <!-- jQuery is only used by certain tags injected by GTM -->
+    <script type='text/javascript' src='https://cdn.myfonts.net/s/js/jquery/jquery.min.js'></script>
+    <script type='text/javascript'>
+      var $j = jQuery.noConflict();
+    </script>
+
+    <!-- Page-hiding snippet (recommended) -->
+    <style>.async-hide, .ab-test-hide { opacity: 0 !important}</style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-5628STD':true});</script>
+    <!-- End Page-hiding snippet -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5628STD');
+    </script>
+    <!-- End Google Tag Manager -->
+  <link href="/WhatTheFont/statics/styles/frontend.1644909914521.css" rel="stylesheet"></head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5628STD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Load tophat banner -->
+    <tophat-banner></tophat-banner>
+
+    <!-- WTF Application Root -->
+    <div id="root"></div>
+  <script type="text/javascript" src="/WhatTheFont/frontend.1644909914521.js" async></script></body>
+</html>
